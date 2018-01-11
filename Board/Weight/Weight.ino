@@ -31,12 +31,10 @@ void startWeight()
       dc.stopMotorA();
       dc.stopMotorB();
       sm.startLiftUp();
+      //Start read weight
       delay(5000);
       sm.startLiftDown();
       dc.startMotorA(0);
       dc.startMotorB(1);
-}
-
-  
 }
 
