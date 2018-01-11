@@ -1,10 +1,12 @@
 #include "UltraSonic.h"
 #include "DCmotor.h"
 #include "ServoMotor.h"
+#include "LoadCell.h"
 
-UltraSonic uls(D0,D1);
-DCmotor dc(D2,D3,D4,D5);
 ServoMotor sm(D6,D7);
+DCmotor dc(D0,D1,D2,D3);
+UltraSonic uls(D5,D4);
+LoadCell lc(D0);
 
 void setup()
 {
@@ -16,7 +18,7 @@ void loop()
     double distance = uls.readDistance();
     Serial.println(distance);
 
-    if(distance < 20)
+    if(distance > 0 && distance < 20)
     {
       startWeight();
     }
@@ -31,10 +33,15 @@ void startWeight()
       dc.stopMotorA();
       dc.stopMotorB();
       sm.startLiftUp();
-      //Start read weight
+
+      lc.readWeight();
       delay(5000);
+      
       sm.startLiftDown();
       dc.startMotorA(0);
       dc.startMotorB(1);
+      delay(1000);
+      dc.stopMotorA();
+      dc.stopMotorB();
 }
 
