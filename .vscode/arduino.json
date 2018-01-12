@@ -1,5 +1,6 @@
 {
-    "sketch": "Board\\Weight\\Weight.ino",
+    "sketch": "Test\\NetPieTest\\NetPieTest.ino",
     "board": "esp8266:esp8266:nodemcuv2",
-    "configuration": "CpuFrequency=80,UploadSpeed=921600,FlashSize=4M3M"
+    "configuration": "CpuFrequency=80,UploadSpeed=921600,FlashSize=4M3M",
+    "port": "COM3"
 }
