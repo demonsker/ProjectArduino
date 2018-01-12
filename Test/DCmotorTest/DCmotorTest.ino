@@ -46,10 +46,22 @@ void loop()
   else if(input == '5') //MotorA and MotorB forward
   {
       dc.startMotorA(1);
-      dc.startMotorB(0);
+      dc.startMotorB(1);
       
   }
   else if(input == '6') //MotorA and MotorB backward
+  {
+      dc.startMotorA(0);
+      dc.startMotorB(0);
+          
+  }
+  else if(input == '7') //MotorA forward and MotorB backward
+  {
+      dc.startMotorA(1);
+      dc.startMotorB(0);
+          
+  }
+  else if(input == '8') //MotorA backward and MotorB forward
   {
       dc.startMotorA(0);
       dc.startMotorB(1);
