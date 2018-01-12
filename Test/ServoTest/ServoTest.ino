@@ -40,6 +40,26 @@ void loop()
   else if(input == '5')
   {
     Serial.println("180 Degree");
-    ssm.changeDegree(180);
+    sm.changeDegree(180);
+  }
+  else if(input == '6')
+  {
+    Serial.println("OpenFood servo1");
+    sm.openFood(1);
+  }
+  else if(input == '7')
+  {
+    Serial.println("OpenFood servo2");
+    sm.openFood(2);
+  }
+  else if(input == '8')
+  {
+    Serial.println("CloseFood servo1");
+    sm.closeFood(1);
+  }
+  else if(input == '9')
+  {
+    Serial.println("CloseFood servo2");
+    sm.closeFood(2);
   }
 }

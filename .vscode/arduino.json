@@ -1,6 +1,5 @@
 {
-    "sketch": "Test\\DCmotorTest\\DCmotorTest.ino",
+    "sketch": "Board\\Weight\\Weight.ino",
     "board": "esp8266:esp8266:nodemcuv2",
-    "configuration": "CpuFrequency=80,UploadSpeed=921600,FlashSize=4M3M",
-    "port": "COM3"
+    "configuration": "CpuFrequency=80,UploadSpeed=921600,FlashSize=4M3M"
 }
