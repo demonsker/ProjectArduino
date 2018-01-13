@@ -1,0 +1,117 @@
+[
+  {
+    "Sourcefile": "",
+    "Include": "",
+    "Includepath": "C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.4.0\\cores\\esp8266"
+  },
+  {
+    "Sourcefile": "",
+    "Include": "",
+    "Includepath": "C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.4.0\\variants\\adafruit"
+  },
+  {
+    "Sourcefile": "c:\\Users\\EucliwoodX\\Desktop\\ProjectArduino\\Output\\sketch\\NetPieTest.ino.cpp",
+    "Include": "NETPIE.h",
+    "Includepath": "C:\\Users\\EucliwoodX\\Documents\\Arduino\\libraries\\NETPIE"
+  },
+  {
+    "Sourcefile": "c:\\Users\\EucliwoodX\\Desktop\\ProjectArduino\\Output\\sketch\\NetPieTest.ino.cpp",
+    "Include": "MicroGear.h",
+    "Includepath": "C:\\Users\\EucliwoodX\\Documents\\Arduino\\libraries\\microgear-esp8266-arduino-master"
+  },
+  {
+    "Sourcefile": "c:\\Users\\EucliwoodX\\Desktop\\ProjectArduino\\Output\\sketch\\NetPieTest.ino.cpp",
+    "Include": "ESP8266WiFi.h",
+    "Includepath": "C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.4.0\\libraries\\ESP8266WiFi\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\EucliwoodX\\Desktop\\ProjectArduino\\Output\\sketch\\NetPieTest.ino.cpp",
+    "Include": "EEPROM.h",
+    "Includepath": "C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.4.0\\libraries\\EEPROM"
+  },
+  {
+    "Sourcefile": "c:\\Users\\EucliwoodX\\Desktop\\ProjectArduino\\Output\\sketch\\NetPieTest.ino.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\Documents\\Arduino\\libraries\\NETPIE\\NETPIE.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\Documents\\Arduino\\libraries\\microgear-esp8266-arduino-master\\AuthClient.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\Documents\\Arduino\\libraries\\microgear-esp8266-arduino-master\\MicroGear.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\Documents\\Arduino\\libraries\\microgear-esp8266-arduino-master\\PubSubClient.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\Documents\\Arduino\\libraries\\microgear-esp8266-arduino-master\\SHA1.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.4.0\\libraries\\ESP8266WiFi\\src\\ESP8266WiFi.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.4.0\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiAP.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.4.0\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiGeneric.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.4.0\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiMulti.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.4.0\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiSTA.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.4.0\\libraries\\ESP8266WiFi\\src\\ESP8266WiFiScan.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.4.0\\libraries\\ESP8266WiFi\\src\\WiFiClient.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.4.0\\libraries\\ESP8266WiFi\\src\\WiFiClientSecure.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.4.0\\libraries\\ESP8266WiFi\\src\\WiFiServer.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.4.0\\libraries\\ESP8266WiFi\\src\\WiFiUdp.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.4.0\\libraries\\EEPROM\\EEPROM.cpp",
+    "Include": "",
+    "Includepath": ""
+  }
+]

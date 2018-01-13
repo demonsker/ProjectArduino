@@ -1,0 +1,10 @@
+{
+  "builtInLibrariesFolders": "D:\\Arduino\\libraries",
+  "customBuildProperties": "build.path=c:\\Users\\EucliwoodX\\Desktop\\ProjectArduino\\Output,build.warn_data_percentage=75,runtime.tools.xtensa-lx106-elf-gcc.path=C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\tools\\xtensa-lx106-elf-gcc\\1.20.0-26-gb404fb9-2,runtime.tools.esptool.path=C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\tools\\esptool\\0.4.12,runtime.tools.mkspiffs.path=C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages\\esp8266\\tools\\mkspiffs\\0.2.0",
+  "fqbn": "esp8266:esp8266:huzzah:CpuFrequency=80,FlashSize=4M1M,LwIPVariant=v2mss536,Debug=Disabled,DebugLevel=None____,UploadSpeed=921600",
+  "hardwareFolders": "D:\\Arduino\\hardware,C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages",
+  "otherLibrariesFolders": "C:\\Users\\EucliwoodX\\Documents\\Arduino\\libraries",
+  "runtime.ide.version": "10802",
+  "sketchLocation": "c:\\Users\\EucliwoodX\\Desktop\\ProjectArduino\\Test\\NetPieTest\\NetPieTest.ino",
+  "toolsFolders": "D:\\Arduino\\tools-builder,D:\\Arduino\\hardware\\tools\\avr,C:\\Users\\EucliwoodX\\AppData\\Local\\Arduino15\\packages"
+}
