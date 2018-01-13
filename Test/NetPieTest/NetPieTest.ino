@@ -1,11 +1,12 @@
 #include "NETPIE.h"
 
-NETPIE netPie;
+NETPIE netPie("HappyPigsty","zw0HnvDcL9VY4qA","BDiOw4Twn98leHH6ATHDkV7fD");
 
 void setup()
 {
-    netPie.initialize();
-    netPie.getMicrogear().on(MESSAGE,ReceiveMessage); 
+    netPie.getMicrogear().on(MESSAGE,ReceiveMessage);
+    netPie.setAlias("TestBoard");
+    netPie.setWIFI("SR_NewBorn", "0874847756");
     netPie.connectWIFI();
     netPie.connect();
 }
