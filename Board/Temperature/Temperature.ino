@@ -2,6 +2,10 @@
 #include "Relay.h"
 #include "NETPIE.h"
 
+#define WIFI "Your ASUS"
+#define PWD "0874847756"
+#define ALIAS "Board"
+
 #define RELAYPINA D0
 #define RELAYPINB D1
 #define DHTTYPE DHT11
@@ -16,20 +20,22 @@ void setup()
   Serial.begin(115200);
   dht.begin();
   netPie.getMicrogear().on(MESSAGE,ReceiveMessage);
-  netPie.setAlias("Board");
-  netPie.setWIFI("SR_NewBorn", "0874847756");
+  netPie.setAlias(ALIAS);
+  netPie.setWIFI(WIFI, PWD);
   netPie.connectWIFI();
   netPie.connect();
 }
 
 void loop()
 {
-  char* temp;
+  netPie.loopConnect();
+  
+  char temp[5];
   float temperature = dht.readTemperature();
   Serial.print("temp : ");
   Serial.println(temperature);
   sprintf(temp, "%f", temperature);
-  netPie.send("WebControl", temp);
+  netPie.sendMessage("WebControl", temp);
 
   if(temperature > 30 )
   {
