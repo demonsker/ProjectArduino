@@ -1,12 +1,14 @@
 #include "DCmotor.h"
+#define speed 800
 
-DCmotor dc(D0,D1,D2,D3);
+DCmotor dc(D3,D4,D3,D4);
 
 char input;
 
 void setup()
 {
   Serial.begin(115200);
+  dc.setSpeed(speed);
 }
 
 void loop()
