@@ -30,12 +30,10 @@ void loop()
 {
   netPie.loopConnect();
   
-  char temp[5];
   float temperature = dht.readTemperature();
   Serial.print("temp : ");
   Serial.println(temperature);
-  sprintf(temp, "%f", temperature);
-  netPie.sendMessage("WebControl", temp);
+  netPie.sendMessage("WebControl", temperature);
 
   if(temperature > 30 )
   {
