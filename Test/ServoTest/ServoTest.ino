@@ -1,11 +1,16 @@
 #include <Servo.h>
 
-Servo servo;
+Servo servo1;
+Servo servo2;
 
 void setup()
 {
   Serial.begin(115200);
-  servo.attach(8);
+  servo1.attach(D5);
+  servo2.attach(D6);
+
+  servo1.write(0);
+  servo2.write(180);
 }
 
 void loop()
@@ -21,16 +26,19 @@ void loop()
   if(input == '1')
   {
     Serial.println("0 Degree");
-    servo.write(0);
+    servo1.write(0);
+    servo2.write(180);
   }
   else if(input == '2')
   {
     Serial.println("90 Degree");
-    servo.write(90);
+    servo1.write(90);
+    servo2.write(90);
   }
   else if(input == '3')
   {
     Serial.println("180 Degree");
-    servo.write(180);
+    servo1.write(180);
+    servo2.write(0);
   }
 }
