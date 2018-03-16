@@ -1,7 +1,11 @@
 #include "Relay.h"
+#include <DHT.h>
+#define DHTTYPE DHT11           // Define type of sensor 
+#define DHTPIN  5            // Define connected pin
 
-Relay relay(D0,D1);
-
+Relay relay(6,7);
+DHT dht(DHTPIN, DHTTYPE, 15);
+  
 void setup()
 {
     Serial.begin(115200);
@@ -29,7 +33,7 @@ void loop()
   }
   else if(input == '2')
   {
-    Serial.println("startCleaningN");
+    Serial.println("startCleaning");
     relay.startCleaning();
   }
   else if(input == '3')

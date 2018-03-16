@@ -1,8 +1,8 @@
 #include "HX711.h"
 
-#define calibration_factor 49183 //This value is obtained using the SparkFun_HX711_Calibration sketch
-#define DOUT  D5
-#define CLK  A0
+#define calibration_factor 50000//This value is obtained using the SparkFun_HX711_Calibration sketch
+#define DOUT  A0
+#define CLK  A1
 
 HX711 scale(DOUT, CLK);
 

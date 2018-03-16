@@ -1,12 +1,14 @@
 #include "UltraSonic.h"
 #include "DCmotor.h"
+#include "NETPIE.h"
 #include <Servo.h>
 
-#define speed 800
+#define speed 1023
 Servo sm1;
 Servo sm2;
 DCmotor dc(D3,D4,D3,D4);
 UltraSonic uls(D8,D9);
+NETPIE netPie("HappyPigsty","zw0HnvDcL9VY4qA","BDiOw4Twn98leHH6ATHDkV7fD");
 
 void setup()
 {
@@ -18,11 +20,16 @@ void setup()
     
     sm1.write(0);
     sm2.write(180);
+    /*netPie.getMicrogear().on(MESSAGE,ReceiveMessage);
+    netPie.setAlias("Board");
+    netPie.setWIFI("Your ASUS", "0874847756");
+    netPie.connectWIFI();
+    netPie.connect();*/
 }
 
 void loop()
 {   
-  char input = '0';
+ char input = '0';
 
   if(Serial.available())
   {
@@ -37,45 +44,41 @@ void loop()
   
 }
 
+void ReceiveMessage(char *topic, uint8_t* msg, unsigned int msglen) {
+    Serial.print("Receive message : ");
+    msg[msglen] = '\0';
+    Serial.println((char *)msg);
+    startWeight(1);
+}
+
 void startWeight(int type)
 {
-    int stop;
-    double distance;
+    int delay_time;
 
     if(type == 1)
-        stop = 30;
+        delay_time = 1000;        
     else if(type == 2) 
-        stop = 45;
-
-    distance = uls.readDistance();
-    Serial.println(distance);
-
+        delay_time = 1500;       
+        
     dc.startMotorA(1);
     dc.startMotorB(1);
-   
-    while(distance < stop)
-    {   
-        distance = uls.readDistance();
-        Serial.println(distance);
-    }
+    
+    delay(delay_time);
 
     dc.stopMotorA();
     dc.stopMotorB();
     sm1.write(180);
     sm2.write(0);
 
-    delay(3500);
+    delay(3000);
 
     sm1.write(0);
     sm2.write(180);
+    
     dc.startMotorA(0);
     dc.startMotorB(0);    
 
-    while(distance > 5)
-    {
-        distance = uls.readDistance();
-        Serial.println(distance);
-    }
+    delay(delay_time);
     
     dc.stopMotorA();
     dc.stopMotorB(); 
