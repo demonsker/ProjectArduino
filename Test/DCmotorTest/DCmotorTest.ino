@@ -1,5 +1,5 @@
 #include "DCmotor.h"
-#define speed 800
+#define speed 900
 
 DCmotor dc(D3,D4,D3,D4);
 
