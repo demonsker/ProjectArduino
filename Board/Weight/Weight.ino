@@ -12,7 +12,10 @@ UltraSonic uls(D8,D9);
 HX711 scale(D2, D7);
 NETPIE netPie("HappyPigsty","zw0HnvDcL9VY4qA","BDiOw4Twn98leHH6ATHDkV7fD");
 
-int delay_time = 0;
+int delay_time, loadcell;
+double distance;  
+double weight;
+
 
 void setup()
 {
@@ -33,20 +36,16 @@ void setup()
     scale.set_scale();
     scale.tare(); 
     scale.set_scale(calibration_factor);
+
+    delay_time = 0;
+    loadcell = 0;
+    distance = 0.00;  
+    weight = 0.00;
 }
 
 void loop()
 {   
   netPie.loopConnect();
-  
-  char input = '0';
-
-  if(Serial.available())
-  {
-    input = Serial.read();
-    Serial.println(input);
-  } 
-  
 }
 
 void ReceiveMessage(char *topic, uint8_t* msg, unsigned int msglen) {
@@ -60,12 +59,11 @@ void ReceiveMessage(char *topic, uint8_t* msg, unsigned int msglen) {
 
 void startWeight()
 {
-    double distance;  
-    double weight;  
-
     distance = uls.readDistance();
-    send_data("WebControl", "distance", distance);
-    
+    weight = 0.00;
+    send_data("WebControl"); 
+
+    //GO!!
     dc.startMotorA(1);
     dc.startMotorB(1);
 
@@ -73,22 +71,24 @@ void startWeight()
 
     dc.stopMotorA();
     dc.stopMotorB();
+    distance = uls.readDistance();
+    send_data("WebControl");
+
+    //Servo start!!
     sm1.write(0);
     sm2.write(180);
-
-    send_data("WebControl", "loadcell", 1);
-    delay(5000);
-    weight = get_units_kg();
-    send_data("WebControl", "weightcar", weight);
+    loadcell = 1;
+    send_data("WebControl");
     
-    send_data("WebControl", "loadcell", 0);
+    delay(5000);
+    
+    weight = get_units_kg();
+    loadcell = 0;
+    send_data("WebControl");
     sm1.write(180);
     sm2.write(0);
 
-
-    distance = uls.readDistance();
-    send_data("WebControl", "distance", distance);
-    
+    //Back!!
     dc.startMotorA(0);
     dc.startMotorB(0);    
     
@@ -96,16 +96,23 @@ void startWeight()
     
     dc.stopMotorA();
     dc.stopMotorB(); 
-
     distance = uls.readDistance();
-    Serial.println(distance);
-    send_data("WebControl", "distance", distance);
+    send_data("WebControl");
 }
 
-void send_data(char* target, String key, double value){
-    String message = key + " " + String(value);
+void send_data(char* target){
+    String message = toJSON();
     netPie.sendMessage(target, message);
-    Serial.println(message);
+}
+
+String toJSON()
+{
+    String json = "{";
+    json += "\"distance\":" + String(distance) + ",";
+    json += "\"loadcell\":" + String(loadcell) + ",";
+    json += "\"weight\":" + String(weight);
+    json += "}";   
+    return json;
 }
 
 float get_units_kg()
